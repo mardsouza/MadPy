@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26", "sympy"]
+build-backend = "hatchling.build"
+
+[project]
+name = "madpy"
+version = "0.0.1"
+authors = [
+  { name="Marcio de Souza", email="msmateusjr@gmail.com" },
+]
+description = "A Python interface to run MadGraph"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/mardsouza/madpy"
+Issues = "https://github.com/mardsouza/madpy/issues"
