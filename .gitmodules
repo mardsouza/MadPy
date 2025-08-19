@@ -1,3 +1,6 @@
 [submodule "mg5amcnlo"]
 	path = mg5amcnlo
 	url = https://github.com/mg5amcnlo/mg5amcnlo.git
+[submodule "maddm"]
+	path = maddm
+	url = https://github.com/maddmhep/maddm.git
