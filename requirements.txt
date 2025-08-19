@@ -2,3 +2,4 @@ pandas
 numpy
 sympy
 wget
+pylhe

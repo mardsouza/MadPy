@@ -1,4 +1,4 @@
 # MadPy
 
 
-A Python interface to run MadGraph
+A simple Python interface to run MadGraph

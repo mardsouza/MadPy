@@ -207,5 +207,7 @@ marimo/_lsp/
 __marimo__/
 token
 notebook-test.ipynb
-MG5_aMC*
 workdir/*
+mg5_versions/*
+notebooks/ME5_debug
+notebooks/py.py
