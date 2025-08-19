@@ -211,3 +211,4 @@ workdir/*
 mg5_versions/*
 notebooks/ME5_debug
 notebooks/py.py
+models/*
