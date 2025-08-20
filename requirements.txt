@@ -1,5 +1,8 @@
 pandas
 numpy
 sympy
+scipy
 wget
 pylhe
+matplotlib
+awkward>2.0.0

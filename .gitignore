@@ -212,3 +212,9 @@ mg5_versions/*
 notebooks/ME5_debug
 notebooks/py.py
 models/*
+MG5_aMC_v2/*
+*.tar.gz
+mg5amcnlo-2.9.24/*
+.vscode/*
+.env
+*.csv
