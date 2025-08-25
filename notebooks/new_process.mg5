@@ -1,0 +1,9 @@
+    generate p p > t t~ j
+    output ../workdir/new_process -f
+    launch ../workdir/new_process
+        set mass mt scan:[190, 200]
+        set decay wt Auto # changing the top width
+        set ptj 40 # changing the ptj cut
+        madspin=ON
+        set nevents 1k
+    

@@ -1,0 +1,10 @@
+import model DMsimp_s_spin0
+generate p p > Y0 > xd xd~ a
+output ../workdir/dmsimp_v1 -f
+launch ../workdir/dmsimp_v1
+	set mass mxd scan:[500, 1000]
+	set decay 9000001 Auto
+	set decay 9000002 Auto
+	set decay 9000003 Auto
+	set decay 9000004 Auto
+	set nevents 10000
