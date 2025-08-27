@@ -46,7 +46,7 @@ define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
 define p = 21 2 4 1 3 -2 -4 -1 -3 5 -5 # pass to 5 flavors
 define j = p
-generate p p > xd xd~ j
+generate p p > Y0 > xd xd~
 Traceback (most recent call last):
   File "/home/mjrxy/MadPy/mg5amcnlo/madgraph/interface/extended_cmd.py", line 1548, in onecmd
     return self.onecmd_orig(line, **opt)
@@ -76,7 +76,7 @@ Traceback (most recent call last):
     self.generate_multi_amplitudes(process_def,
   File "/home/mjrxy/MadPy/mg5amcnlo/madgraph/core/diagram_generation.py", line 1903, in generate_multi_amplitudes
     raise NoDiagramException("No amplitudes generated from process %s. Please enter a valid process" % \
-madgraph.core.diagram_generation.NoDiagramException: No amplitudes generated from process Process: g/u/c/d/s/u~/c~/d~/s~/b/b~ g/u/c/d/s/u~/c~/d~/s~/b/b~ > xd xd~ g/u/c/d/s/b/u~/c~/d~/s~/b~ DMS=2 WEIGHTED=18 @1. Please enter a valid process
+madgraph.core.diagram_generation.NoDiagramException: No amplitudes generated from process Process: g/u/c/d/s/u~/c~/d~/s~/b/b~ g/u/c/d/s/u~/c~/d~/s~/b/b~ > y0> xd xd~ DMS=2 WEIGHTED=12 @1. Please enter a valid process
                           MadGraph5_aMC@NLO Options    
                           ----------------    
         complex_mass_scheme 	:	False

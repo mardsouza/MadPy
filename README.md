@@ -30,6 +30,8 @@ pip install madpy
 git clone https://github.com/mg5amcnlo/mg5amcnlo.git
 cd mg5amcnlo
 git switch 3.x
+
+rm -rf bin/*.py
 ```
 
 
@@ -87,6 +89,38 @@ git switch rc/3.3
 cp -R . ../mg5amcnlo-2.9.24/PLUGIN/maddm
 cp -R maddm ../mg5amcnlo-2.9.24/bin/maddm.py
 ```
+
+## Install LHAPDF
+```sh
+wget https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.X.Y.tar.gz -O LHAPDF-6.X.Y.tar.gz
+# ^ or use a web browser to download, which will get the filename correct
+tar xf LHAPDF-6.X.Y.tar.gz
+cd LHAPDF-6.X.Y
+## Changes 
+export PYTHON_VERSION=3.10
+export PYTHON=/opt/apps/python/3.10/bin/python3.10
+./configure --prefix/opt/apps/lhapdf
+make
+make install
+```
+
+## Troubleshooting
+
+find /opt/apps/python/3.10 -name "libpython3.10.so.1.0"
+export LD_LIBRARY_PATH=/opt/apps/python/3.10/lib:$LD_LIBRARY_PATH
+echo "/opt/apps/python/3.10/lib" | sudo tee /etc/ld.so.conf.d/python310.conf
+sudo ldconfig
+
+
+
+file /opt/modulefiles/lhapdf/6.5.5
+``` /opt/modulefiles/lhapdf/6.5.5
+#%Module1.0
+prepend-path PATH /opt/apps/lhapdf/bin
+prepend-path LD_LIBRARY_PATH /opt/apps/lhapdf/lib
+prepend-path PYTHONPATH /opt/apps/lhapdf/lib/python3.10/site-packages
+```
+
 
 # MadGraph FAQ
 

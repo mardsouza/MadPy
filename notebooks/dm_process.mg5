@@ -1,10 +1,14 @@
 import model DMsimp_s_spin0
 generate p p > Y0 > xd xd~ a
 output ../workdir/dmsimp_v1 -f
+display diagrams
 launch ../workdir/dmsimp_v1
-	set mass mxd scan:[500, 1000]
-	set decay 9000001 Auto
-	set decay 9000002 Auto
-	set decay 9000003 Auto
-	set decay 9000004 Auto
-	set nevents 10000
+	set mass mxd scan:[500, 1000, 1400, 1500]
+	set mass my0 3000
+	set width 9000001 Auto
+	set width 9000002 Auto
+	set width 9000003 Auto
+	set width 9000004 Auto
+	set nevents 1000
+	set run_card ebeam1 = 7500
+	set run_card ebeam2 = 7500
