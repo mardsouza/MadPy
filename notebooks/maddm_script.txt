@@ -1,0 +1,35 @@
+import model DMsimp_s_spin0
+define darkmatter xd
+generate relic_density
+output ../workdir/dmsimp_v1/MADDM_spin0
+launch ../workdir/dmsimp_v1/MADDM_spin0
+	set mass mxd scan1:[166.66666666666666, 333.3333333333333, 500.0, 666.6666666666666, 833.3333333333334, 1000.0, 1166.6666666666667, 1333.3333333333333]
+	set mass my0 scan1:[500, 1000, 1500, 2000, 2500, 3000, 3500, 4000]
+	set DMINPUTS gsd11 0.25
+	set DMINPUTS gsu11 0.25
+	set DMINPUTS gsd22 0.25
+	set DMINPUTS gsu22 0.25
+	set DMINPUTS gsd33 0.25
+	set DMINPUTS gsu33 0.25
+	set DMINPUTS gpd11 0.25
+	set DMINPUTS gpu11 0.25
+	set DMINPUTS gpd22 0.25
+	set DMINPUTS gpu22 0.25
+	set DMINPUTS gpd33 0.25
+	set DMINPUTS gpu33 0.25
+	set DMINPUTS gsg 0.25
+	set DMINPUTS gpg 0.25
+	set DMINPUTS gsh1 0.25
+	set DMINPUTS gsh2 0.25
+	set DMINPUTS gsb 0.25
+	set DMINPUTS gpb 0.25
+	set DMINPUTS gsw 0.25
+	set DMINPUTS gpw 0.25
+	set DMINPUTS gsxr 1.0
+	set DMINPUTS gsxc 1.0
+	set DMINPUTS gsxd 1.0
+	set DMINPUTS gpxd 1.0
+	set width 9000001 Auto
+	set width 9000002 Auto
+	set width 9000003 Auto
+	set width 9000004 Auto

@@ -1,6 +1,6 @@
 import model sm
 import model eDMsimp_s_spin0
-generate e+ e- > y0 > xd xd~
+generate e+ e- > y0 > $ xd xd~
 output ../workdir/dmsimp_ee_v1 -f
 display diagrams
 launch ../workdir/dmsimp_ee_v1
@@ -10,8 +10,9 @@ launch ../workdir/dmsimp_ee_v1
 	set DMINPUTS gSXd 1.0
 	set DMINPUTS gSXc  1.0
 	set DMINPUTS gsxr 1.0
+	set run_card bwcutoff = 150
 	set run_card ebeam1 = 1500
 	set run_card ebeam2 = 1500
 	set run_card lpp1 = 0
 	set run_card lpp2 = 0
-	set nevents 10000
+	set nevents 1000

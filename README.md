@@ -71,6 +71,17 @@ python2.7 bin/maddm.py
 
 After that, you can follow the [tutorial to learn MadDM basic features](https://maddmhep.github.io)
 
+### Run Simplified DM model scan
+
+
+```
+MadDM> import model eDMsimp_s_spin0
+MadDM> define darkmatter xd
+MadDM> generate direct
+MadDM> output SCAN_example
+MadDM> launch SCAN_example
+```
+
 
 
 # TODO:
@@ -99,7 +110,7 @@ cd LHAPDF-6.X.Y
 ## Changes 
 export PYTHON_VERSION=3.10
 export PYTHON=/opt/apps/python/3.10/bin/python3.10
-./configure --prefix/opt/apps/lhapdf
+./configure  --prefix=/opt/apps/python/3.10
 make
 make install
 ```
