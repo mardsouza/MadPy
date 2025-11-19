@@ -1,0 +1,6 @@
+import model sm
+import model Axion_EFT_UFO
+generate p p > t t~ axion
+output ./workdir/ALP_v0 -f
+display diagrams ./workdir/ALP_v0
+launch ./workdir/ALP_v0

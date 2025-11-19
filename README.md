@@ -9,6 +9,9 @@ Requirements:
 - MadGraph 3.6+
 - AND Python 2.7 (for MadDM compatibility)
 - AND MadGraph 2.9 (for MadDM compatibility)
+- ghostscript
+
+ sudo apt-get install ghostscript
 
 
 ## (Optional) Create a virtual env

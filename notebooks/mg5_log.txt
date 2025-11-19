@@ -1,0 +1,292 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.6.6                 2025-10-30         *
+*         GIT v3.6.6                           3.x         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../mg5amcnlo/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set lhapdf to lhapdf-config
+set lhapdf to /opt/apps/lhapdf/bin/lhapdf-config
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+import /home/mjrxy/mardsouza/MadPy/notebooks/ALP_v0.mg5
+The import format was not given, so we guess it as command
+import model sm
+INFO: Restrict model sm with file ../mg5amcnlo/models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+import model Axion_EFT_UFO
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles p / j / l+ / l- / vl / vl~ unchanged
+Defined multiparticle all = g a ve vm vt ve~ vm~ vt~ u c t d s b u~ c~ t~ d~ s~ b~ z w+ h axion w- e- mu- ta- e+ mu+ ta+
+generate p p > t t~
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying coupling order WEIGHTED<=2: WEIGTHED IS NP+QCD+2*QED 
+INFO: Trying process: g g > t t~ WEIGHTED<=2 @1  
+INFO: Process has 3 diagrams 
+INFO: Trying process: u u~ > t t~ WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+INFO: Trying process: u c~ > t t~ WEIGHTED<=2 @1  
+INFO: Trying process: c u~ > t t~ WEIGHTED<=2 @1  
+INFO: Trying process: c c~ > t t~ WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+INFO: Trying process: d d~ > t t~ WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+INFO: Trying process: d s~ > t t~ WEIGHTED<=2 @1  
+INFO: Trying process: s d~ > t t~ WEIGHTED<=2 @1  
+INFO: Trying process: s s~ > t t~ WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+INFO: Process u~ u > t t~ added to mirror process u u~ > t t~ 
+INFO: Process c~ c > t t~ added to mirror process c c~ > t t~ 
+INFO: Process d~ d > t t~ added to mirror process d d~ > t t~ 
+INFO: Process s~ s > t t~ added to mirror process s s~ > t t~ 
+5 processes with 7 diagrams generated in 0.025 s
+Total: 5 processes with 7 diagrams
+output ../workdir/ALP_v0 -f
+[1;34merror detected in plugin: maddm.[0m
+[1;34mNo module named 'scipy'[0m
+INFO: initialize a new directory: ALP_v0 
+INFO: remove old information in ALP_v0 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > t t~ WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > t t~ @1 
+INFO: Generating Helas calls for process: u u~ > t t~ WEIGHTED<=2 @1 
+INFO: Processing color information for process: u u~ > t t~ @1 
+INFO: Generating Helas calls for process: c c~ > t t~ WEIGHTED<=2 @1 
+INFO: Processing color information for process: c c~ > t t~ @1 
+INFO: Generating Helas calls for process: d d~ > t t~ WEIGHTED<=2 @1 
+INFO: Processing color information for process: d d~ > t t~ @1 
+INFO: Generating Helas calls for process: s s~ > t t~ WEIGHTED<=2 @1 
+INFO: Processing color information for process: s s~ > t t~ @1 
+INFO: Creating files in directory P1_gg_ttx 
+[1mINFO: Some T-channel width have been set to zero [new since 2.8.0]
+ if you want to keep this width please set "zerowidth_tchannel" to False [0m
+INFO: Generating Feynman diagrams for Process: g g > t t~ WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_ttx 
+INFO: Creating files in directory P1_uux_ttx 
+INFO: Generating Feynman diagrams for Process: u u~ > t t~ WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group uux_ttx 
+INFO: Creating files in directory P1_ccx_ttx 
+INFO: Generating Feynman diagrams for Process: c c~ > t t~ WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group ccx_ttx 
+INFO: Creating files in directory P1_ddx_ttx 
+INFO: Generating Feynman diagrams for Process: d d~ > t t~ WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group ddx_ttx 
+INFO: Creating files in directory P1_ssx_ttx 
+INFO: Generating Feynman diagrams for Process: s s~ > t t~ WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group ssx_ttx 
+Generated helas calls for 5 subprocesses (7 diagrams) in 0.024 s
+Wrote files for 34 helas calls in 0.216 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 2 routines in  0.439 s
+save configuration file to /home/mjrxy/mardsouza/MadPy/workdir/ALP_v0/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+Output to directory /home/mjrxy/mardsouza/MadPy/workdir/ALP_v0 done.
+Type "launch" to generate events from this process, or see
+/home/mjrxy/mardsouza/MadPy/workdir/ALP_v0/README
+Run "open index.html" to see more information about this process.
+display diagrams
+Drawing Process: g g > t t~ WEIGHTED<=2 @1
+Wrote file /tmp/diagrams_1_gg_ttx.eps
+open /tmp/diagrams_1_gg_ttx.eps
+[1;34mNot able to open file /tmp/diagrams_1_gg_ttx.eps since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+Drawing Process: u u~ > t t~ WEIGHTED<=2 @1
+Wrote file /tmp/diagrams_1_uux_ttx.eps
+open /tmp/diagrams_1_uux_ttx.eps
+[1;34mNot able to open file /tmp/diagrams_1_uux_ttx.eps since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+Drawing Process: c c~ > t t~ WEIGHTED<=2 @1
+Wrote file /tmp/diagrams_1_ccx_ttx.eps
+open /tmp/diagrams_1_ccx_ttx.eps
+[1;34mNot able to open file /tmp/diagrams_1_ccx_ttx.eps since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+Drawing Process: d d~ > t t~ WEIGHTED<=2 @1
+Wrote file /tmp/diagrams_1_ddx_ttx.eps
+open /tmp/diagrams_1_ddx_ttx.eps
+[1;34mNot able to open file /tmp/diagrams_1_ddx_ttx.eps since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+Drawing Process: s s~ > t t~ WEIGHTED<=2 @1
+Wrote file /tmp/diagrams_1_ssx_ttx.eps
+open /tmp/diagrams_1_ssx_ttx.eps
+[1;34mNot able to open file /tmp/diagrams_1_ssx_ttx.eps since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+time to draw 0.023034334182739258
+launch ../workdir/ALP_v0
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.6.6                 2025-10-30         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /home/mjrxy/mardsouza/MadPy/workdir/ALP_v0/Cards/me5_configuration.txt  
+INFO: load configuration from /home/mjrxy/mardsouza/MadPy/mg5amcnlo/input/mg5_configuration.txt  
+INFO: load configuration from /home/mjrxy/mardsouza/MadPy/workdir/ALP_v0/Cards/me5_configuration.txt  
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+generate_events run_01
+The following switches determine which programs are run:
+/===========================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [01mNot Avail.[0m        |
+| 2. Choose the detector simulation program    [1mdetector[0m = [01mNot Avail.[0m        |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [01mNot Avail.[0m        |
+| 4. Decay onshell particles                   [1m madspin[0m = [31mOFF[0m               |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m               |
+\===========================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'madspin=ON' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse 0 value[0m
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param : [32mparam_card.dat[0m                                 |
+|  [31m2[0m. run   : [32mrun_card.dat[0m                                   |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, enter path]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse 0 value[0m
+INFO: Update the dependent parameter of the param_card.dat 
+[1;34mWARNING: update the strong coupling value (alpha_s) to the value from the pdf selected: 0.13 [0m
+[1;34mvalue '[]' for entry 'bypass_check' is not valid.  Preserving previous value: '[]'.
+allowed values are any list composed of the following entries: partonshower[0m
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+[1;34mNot able to open file /home/mjrxy/mardsouza/MadPy/workdir/ALP_v0/crossx.html since no program configured.Please set one in ./input/mg5_configuration.txt[0m
+compile Source Directory
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO: Compiling for process 1/5. 
+INFO:     P1_gg_ttx  
+INFO: Compiling for process 2/5. 
+INFO:     P1_uux_ttx  
+INFO: Compiling for process 3/5. 
+INFO:     P1_ccx_ttx  
+INFO: Compiling for process 4/5. 
+INFO:     P1_ddx_ttx  
+INFO: Compiling for process 5/5. 
+INFO:     P1_ssx_ttx  
+INFO:     P1_gg_ttx  
+INFO:     P1_uux_ttx  
+INFO:     P1_ccx_ttx  
+INFO:     P1_ddx_ttx  
+INFO:     P1_ssx_ttx  
+INFO:  Idle: 1,  Running: 1,  Completed: 3 [ current time: 16h08 ] 
+INFO:  Idle: 0,  Running: 2,  Completed: 3 [ current time: 16h08 ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 5 [  0.26s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+sum of cpu time of last step: 3 seconds
+INFO: Effective Luminosity 23.057235744864002 pb^-1 
+INFO: need to improve 3 channels 
+- Current estimate of cross-section: 520.444 +- 4.93132363975353
+    P1_gg_ttx 
+    P1_uux_ttx 
+    P1_ccx_ttx 
+    P1_ddx_ttx 
+    P1_ssx_ttx 
+INFO:  Idle: 0,  Running: 13,  Completed: 0 [ current time: 16h08 ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 13 [  0.81s  ] 
+INFO: Combining runs 
+sum of cpu time of last step: 12 seconds
+INFO: finish refine 
+refine 10000 --treshold=0.9
+No need for second refine due to stability of cross-section
+INFO: Combining Events 
+combination of events done in 1.580911636352539 s 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   518.9 +- 0.7821 pb
+     Nb of events :  10000
+ 
+INFO: Running Systematics computation 
+INFO:  Idle: 1,  Running: 3,  Completed: 0 [ current time: 16h08 ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  13.1s  ] 
+INFO: # Events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: # Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 518.7603874450082
+#     scale variation: +30.2% -21.7%
+#     central scheme variation: + 0% -26%
+# PDF variation: +4.21% -4.21%
+#
+# dynamical scheme # 1 : 494.759 +30% -21.6% # \sum ET
+# dynamical scheme # 2 : 406.207 +27.7% -20.5% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 518.76 +30.2% -21.7% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 383.932 +27.1% -20.1% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+store_events
+INFO: Storing parton level results 
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: storing files of previous run 
+INFO: Done 
+quit
+INFO:  
+more information in /home/mjrxy/mardsouza/MadPy/workdir/ALP_v0/index.html
+quit
